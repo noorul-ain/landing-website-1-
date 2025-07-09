@@ -1,12 +1,12 @@
 import React from 'react';
 
-const ProgramSection = () => {
+const Programs = () => {
   return (
-    <section className="bg-gray-100 py-20 px-6">
+    <section className="bg-[#f5f5f5] py-20 px-6">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <p className="text-blue-600 text-sm font-medium uppercase tracking-wider mb-3">
+          <p className="text-[#212ea0] text-sm font-medium uppercase tracking-wider mb-3">
             OUR PROGRAM
           </p>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
@@ -14,10 +14,10 @@ const ProgramSection = () => {
           </h2>
         </div>
 
-        {/* Images Grid */}
-        <div className="flex flex-row gap-6 justify-center">
+        {/* Images Grid with Smaller Width and Gap */}
+        <div className="flex flex-row justify-center gap-6 flex-wrap">
           {/* Image 1 */}
-          <div className="flex-1 max-w-sm">
+          <div className="max-w-xs w-full">
             <div className="bg-white rounded-xl overflow-hidden shadow-sm">
               <img 
                 src="/api/placeholder/350/400" 
@@ -28,7 +28,7 @@ const ProgramSection = () => {
           </div>
 
           {/* Image 2 */}
-          <div className="flex-1 max-w-sm">
+          <div className="max-w-xs w-full">
             <div className="bg-white rounded-xl overflow-hidden shadow-sm">
               <img 
                 src="/api/placeholder/350/400" 
@@ -39,7 +39,7 @@ const ProgramSection = () => {
           </div>
 
           {/* Image 3 */}
-          <div className="flex-1 max-w-sm">
+          <div className="max-w-xs w-full">
             <div className="bg-white rounded-xl overflow-hidden shadow-sm">
               <img 
                 src="/api/placeholder/350/400" 
@@ -54,4 +54,4 @@ const ProgramSection = () => {
   );
 };
 
-export default ProgramSection;
+export default Programs;

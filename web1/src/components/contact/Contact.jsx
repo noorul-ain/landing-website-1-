@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
 
-export default function ContactForm() {
+export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -30,7 +30,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="bg-gray-100 py-20 px-4">
+    <div className="bg-[#f5f5f5] py-20 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
@@ -38,12 +38,12 @@ export default function ContactForm() {
           <h2 className="text-5xl font-bold text-gray-900">Get in Touch</h2>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 ">
           {/* Right Side - Form */}
-          <div className="space-y-6 lg:order-2">
+          <div className="space-y-6 lg:order-2 ">
             {/* Name Field */}
             <div>
-              <label className="block text-gray-700 font-medium mb-3 text-base">
+              <label className="block text-black  font-medium mb-3 text-base">
                 Your name
               </label>
               <input
@@ -134,8 +134,8 @@ export default function ContactForm() {
             </button>
           </div>
 
-          {/* Left Side - Contact Info */}
-          <div className="space-y-8 lg:order-1">
+          {/* -----------Left Side - Contact Info---------------- */}
+          <div className="space-y-8 lg:order-1 ml-20">
             <div>
               <h3 className="text-2xl font-semibold text-gray-900 mb-6">
                 Send us a message 📧
