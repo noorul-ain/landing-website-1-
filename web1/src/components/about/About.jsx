@@ -1,31 +1,19 @@
 import React from 'react';
 
-const UniversityEducationSection = () => {
+const About = () => {
   return (
-    <div className="bg-[#f5f5f5] py-20 px-4">
+    <div className="bg-[#f5f5f5] py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-          {/* Image Section */}
-          <div className="relative w-full h-full max-w-md mx-auto">
-            <img
+          {/* Video Section */}
+          <div className="w-full max-w-md mx-auto lg:max-w-full">
+            <video
               src="/vedio.mp4"
-              alt="Graduates"
-              className="rounded-xl w-full h-full object-cover shadow-md"
-            />
-
-            {/* Play Button Overlay */}
-            {/* <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-md">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 text-blue-700"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
-            </div> */}
+              controls
+              className="rounded-xl w-full h-64 sm:h-80 md:h-96 object-cover shadow-md"
+            >
+              Your browser does not support the video tag.
+            </video>
           </div>
 
           {/* Text Content */}
@@ -33,10 +21,10 @@ const UniversityEducationSection = () => {
             <p className="text-[#212ea0] text-sm font-semibold uppercase tracking-wide mb-3">
               About University
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 leading-tight mb-6">
               Nurturing Tomorrow's <br /> Leaders Today
             </h2>
-            <div className="text-gray-600 text-base space-y-4 leading-relaxed">
+            <div className="text-gray-600 text-sm sm:text-base space-y-4 leading-relaxed">
               <p>
                 Embark on a transformative educational journey with our university's
                 comprehensive education programs. Our cutting-edge curriculum is
@@ -61,4 +49,4 @@ const UniversityEducationSection = () => {
   );
 };
 
-export default UniversityEducationSection;
+export default About;

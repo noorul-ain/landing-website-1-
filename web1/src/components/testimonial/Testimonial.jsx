@@ -43,47 +43,47 @@ export default function Testimonial() {
   ];
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex + 2 >= testimonials.length ? 0 : prevIndex + 2
+    setCurrentIndex((prev) =>
+      prev + 2 >= testimonials.length ? 0 : prev + 2
     );
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? testimonials.length - 2 : prevIndex - 2
+    setCurrentIndex((prev) =>
+      prev === 0 ? testimonials.length - 2 : prev - 2
     );
   };
 
   return (
-    <div className="bg-[#f5f5f5] py-20 px-4">
+    <section className="bg-[#f5f5f5] py-20 px-4">
       <div className="max-w-7xl mx-auto text-center">
         <p className="text-blue-600 font-semibold mb-3 tracking-wider text-sm uppercase">
-          TESTIMONIALS
+          Testimonials
         </p>
         <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-12">
           What Student Says
         </h2>
 
-        <div className="relative flex items-center justify-center">
-          {/* Left Arrow with Image */}
+        <div className="relative flex flex-col items-center justify-center md:px-10">
+          {/* Left Arrow */}
           <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 bg-[#212ea0] w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shadow-md hover:bg-blue-900 transition"
+            className="absolute left-4 md:left-0 top-1/2 -translate-y-1/2 bg-[#212ea0] w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shadow-md hover:bg-blue-900 transition"
           >
             <img
-              src="https://cdn-icons-png.flaticon.com/512/545/545682.png" // ← Replace with your own left arrow
-              alt="left arrow"
+              src="https://cdn-icons-png.flaticon.com/512/545/545682.png"
+              alt="left"
               className="w-4 h-4 sm:w-5 sm:h-5 invert"
             />
           </button>
 
           {/* Testimonial Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mx-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {[testimonials[currentIndex], testimonials[(currentIndex + 1) % testimonials.length]].map(
               (item) => (
                 <div
                   key={item.id}
-                  className="bg-white rounded-2xl px-6 py-5 text-left shadow-md max-w-sm mx-auto"
+                  className="bg-white rounded-2xl px-6 py-5 text-left shadow-md max-w-md w-full mx-auto"
                 >
                   <div className="flex gap-4 items-start">
                     <img
@@ -106,19 +106,19 @@ export default function Testimonial() {
             )}
           </div>
 
-          {/* Right Arrow with Image */}
+          {/* Right Arrow */}
           <button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 bg-[#212ea0] w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shadow-md hover:bg-blue-900 transition"
+            className="absolute right-4 md:right-0 top-1/2 -translate-y-1/2 bg-[#212ea0] w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shadow-md hover:bg-blue-900 transition"
           >
             <img
-              src="https://cdn-icons-png.flaticon.com/512/545/545680.png" // ← Replace with your own right arrow
-              alt="right arrow"
+              src="https://cdn-icons-png.flaticon.com/512/545/545680.png"
+              alt="right"
               className="w-4 h-4 sm:w-5 sm:h-5 invert"
             />
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
